@@ -1,38 +1,31 @@
-'use strict';
 
-const sketch = (p) => {
-
-	p.setup = () => {
+function setup() {
 		// Create the canvas
-	    p.createCanvas(p.windowWidth, p.windowHeight);
-		p.noLoop();
-	};
+	   //p.createCanvas(p.windowWidth, p.windowHeight);
+	   createCanvas(500, 500);
+		noLoop();
+};
 
-	p.draw = () => {
-		p.background(200);
+function draw() {
+		background(200);
 
 		// Set colors
-		p.fill(204, 101, 192, 127);
-		p.stroke(127, 63, 120);
+		fill(204, 101, 192, 127);
+		stroke(127, 63, 120);
 
 		// A rectangle
-		p.rect(40, 120, 120, 40);
+		//rect(40, 120, 120, 40);
 		// An ellipse
-		p.ellipse(240, 240, 80, 80);
+		//ellipse(240, 240, 80, 80);
 		// A triangle
-		p.triangle(300, 100, 320, 100, 310, 80);
+		//triangle(300, 100, 320, 100, 310, 80);
 
 		// A design for a simple flower
-		p.translate(580, 200);
-		p.noStroke();
+		translate(width/2, height/2);
+		noStroke();
 		for (var i = 0; i < 10; i ++) {
-			p.ellipse(0, 30, 20, 80);
-			p.rotate(p.PI / 5);
+			ellipse(0, 30, 20, 80);
+			rotate(PI / 5);
 		}
 	};
-
-	p.windowResized = () => {
-		p.resizeCanvas(p.windowWidth, p.windowHeight);
-	}
-}
 
